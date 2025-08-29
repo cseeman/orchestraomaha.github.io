@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestra Omaha Community Newsletter</title>
+    <style>
+        /* Reset styles for email clients */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Main container styles */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Header styles */
+        .header {
+            background: linear-gradient(135deg, #8B0000 0%, #1a365d 100%);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-title {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+
+        .newsletter-subtitle {
+            color: #ffffff;
+            font-size: 16px;
+            margin: 5px 0 0 0;
+            text-align: center;
+        }
+
+        /* Content sections */
+        .content-section {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .welcome-text {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 25px;
+        }
+
+        /* Concert highlight section */
+        .concert-highlight {
+            background-color: #f7fafc;
+            border: 2px solid #8B0000;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .concert-title {
+            color: #8B0000;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+
+        .concert-details {
+            font-size: 16px;
+            color: #333333;
+            margin: 10px 0;
+        }
+
+        .concert-details strong {
+            color: #8B0000;
+        }
+
+        /* Section headers */
+        .section-header {
+            color: #8B0000;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #d69e2e;
+            padding-bottom: 8px;
+        }
+
+        /* Behind the scenes section */
+        .behind-scenes {
+            background-color: #ffffff;
+            border: 2px solid #1a365d;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Community corner section */
+        .community-corner {
+            background-color: #f7fafc;
+            border: 2px solid #d69e2e;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        /* Support section */
+        .support-section {
+            background: linear-gradient(135deg, #8B0000 0%, #8B0000 50%, #1a365d 100%);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .support-section h3 {
+            color: #ffffff;
+            margin: 0 0 15px 0;
+        }
+
+        .support-section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .support-section li {
+            margin: 8px 0;
+        }
+
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background-color: #d69e2e;
+            color: #333333;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta-button:hover {
+            background-color: #b8860b;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            border-top: 3px solid #8B0000;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .footer-signature {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .contact-info {
+            margin: 15px 0;
+        }
+
+        .contact-info a {
+            color: #8B0000;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+
+            .content-section {
+                padding: 15px !important;
+            }
+
+            .concert-highlight,
+            .behind-scenes,
+            .community-corner,
+            .support-section {
+                padding: 20px !important;
+            }
+
+            .newsletter-title {
+                font-size: 24px !important;
+            }
+
+            .section-header {
+                font-size: 18px !important;
+            }
+
+            .cta-button {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
+
+        /* List styles */
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            color: #333333;
+        }
+
+        /* Link styles */
+        a {
+            color: #8B0000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600"
+                    class="email-container">
+
+                    <!-- Header Section -->
+                    <tr>
+                        <td class="header">
+                            <!-- Orchestra Omaha Logo - Updated URL -->
+                            <img src="https://orchestraomaha.github.io/assets/images/logo/orchestra-omaha-logo.jpg"
+                                alt="Orchestra Omaha" class="logo">
+                            <h1 class="newsletter-title">Orchestra Omaha Community Newsletter</h1>
+                            <p class="newsletter-subtitle">[Month] [Year]</p>
+                        </td>
+                    </tr>
+
+                    <!-- Welcome Section -->
+                    <tr>
+                        <td class="content-section">
+                            <p class="welcome-text">
+                                Dear [First Name],<br><br>
+                                Thank you for being part of the Orchestra Omaha community. We're excited to share the
+                                latest news, upcoming events, and behind-the-scenes stories from our orchestra family.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Upcoming Concert Section -->
+                    <tr>
+                        <td class="content-section">
+                            <div class="concert-highlight">
+                                <h2 class="concert-title">🎵 Next Concert: [Concert Title]</h2>
+                                <p class="concert-details">
+                                    <strong>📅 Date:</strong> [Date] at 7:00 PM<br>
+                                    <strong>📍 Venue:</strong> Simon Concert Hall - Omaha Conservatory of Music<br>
+                                    <strong>🎼 Program:</strong> [Brief program description]
+                                </p>
+                                <p class="concert-details">
+                                    [Concert-specific details, featured works, guest artists, etc.]
+                                </p>
+                                <p class="concert-details">
+                                    <strong>RSVP:</strong> <a href="[RSVP_LINK]">Click here to RSVP</a><br>
+                                    <strong>Admission:</strong> Free - Donations welcome at the door
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Save the Dates Section -->
+                    <tr>
+                        <td class="content-section">
+                            <h2 class="section-header">📅 Save the Dates</h2>
+                            <p><strong>2025-2026 Season Remaining Concerts:</strong></p>
+                            <ul>
+                                <li>[Date] - [Concert Title]</li>
+                                <li>[Date] - [Concert Title]</li>
+                                <li>[Date] - [Concert Title]</li>
+                            </ul>
+                            <p><strong>Special Events:</strong></p>
+                            <ul>
+                                <li>[Date] - Concerto Competition</li>
+                                <li>[Date] - Dress Rehearsal (Friends members only)</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <!-- Behind the Scenes Section -->
+                    <tr>
+                        <td class="content-section">
+                            <div class="behind-scenes">
+                                <h2 class="section-header">🎼 Behind the Scenes</h2>
+                                <h3>Rehearsal Highlights</h3>
+                                <p>[Brief story about recent rehearsals, musical challenges overcome, fun moments, or
+                                    interesting musical discoveries]</p>
+
+                                <h3>Musician Spotlight</h3>
+                                <p>[Feature a musician, section, or interesting fact about the orchestra]</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Community Corner Section -->
+                    <tr>
+                        <td class="content-section">
+                            <div class="community-corner">
+                                <h2 class="section-header">👥 Community Corner</h2>
+
+                                <h3>Friends of Orchestra Omaha</h3>
+                                <p>Support our mission and enjoy exclusive benefits including reserved seating, dress
+                                    rehearsal access, and special recognition. Annual contribution: $250.</p>
+
+                                <h3>Volunteer Opportunities</h3>
+                                <p>We're always looking for volunteers to help with concerts, events, and administrative
+                                    tasks. Contact us to learn more.</p>
+
+                                <h3>New Members Welcome</h3>
+                                <p>Know a musician interested in joining? Auditions are ongoing. Share our audition
+                                    information: <a href="[AUDITION_LINK]">Click here</a></p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Support Section -->
+                    <tr>
+                        <td class="content-section">
+                            <div class="support-section">
+                                <h3>💝 Your Support Makes a Difference</h3>
+                                <p>Orchestra Omaha operates on a budget of less than $30,000 annually. Your
+                                    contributions help us:</p>
+                                <ul>
+                                    <li>Keep concerts free for the community</li>
+                                    <li>Purchase music and equipment</li>
+                                    <li>Support guest artists and soloists</li>
+                                    <li>Maintain our rehearsal and performance spaces</li>
+                                </ul>
+                                <p><strong>Ways to Support:</strong></p>
+                                <ul>
+                                    <li>Become a Friend of Orchestra Omaha ($250/year)</li>
+                                    <li>Make a one-time donation</li>
+                                    <li>Volunteer your time and skills</li>
+                                    <li>Share our events with friends and family</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Call to Action Button -->
+                    <tr>
+                        <td class="content-section" style="text-align: center;">
+                            <a href="[DONATION_LINK]" class="cta-button">Become a Friend of Orchestra Omaha</a>
+                        </td>
+                    </tr>
+
+                    <!-- Footer Section -->
+                    <tr>
+                        <td class="footer">
+                            <div class="footer-content">
+                                <div class="contact-info">
+                                    <strong>Connect With Us</strong><br>
+                                    🌐 <a href="[WEBSITE_URL]">[Website URL]</a><br>
+                                    📧 <a href="mailto:[EMAIL]">[Email Address]</a><br>
+                                    📱 <a href="[SOCIAL_MEDIA_LINK]">[Social Media Links]</a>
+                                </div>
+
+                                <div class="contact-info">
+                                    <strong>Rehearsal Information</strong><br>
+                                    📍 Simon Concert Hall - Omaha Conservatory of Music<br>
+                                    ⏰ Thursdays, 7:00 PM - 9:00 PM<br>
+                                    🎵 New members welcome - contact us for audition information
+                                </div>
+
+                                <div class="contact-info">
+                                    <strong>Concert Information</strong><br>
+                                    📍 Simon Concert Hall - Omaha Conservatory of Music<br>
+                                    ⏰ Saturdays, 7:00 PM<br>
+                                    🎫 Free admission - donations welcome
+                                </div>
+
+                                <hr style="border: none; border-top: 1px solid #718096; margin: 20px 0;">
+
+                                <div class="footer-signature">
+                                    <strong>Christine Seeman</strong><br>
+                                    President, Orchestra Omaha<br>
+                                    [Email] | [Phone]<br><br>
+                                    <em>Thank you for supporting local music in Omaha!</em>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
